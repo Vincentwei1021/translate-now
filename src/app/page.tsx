@@ -46,7 +46,7 @@ const webAppSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   name: "TranslateNow",
-  url: "https://translatenow.dev",
+  url: "https://translate.toolboxlite.com",
   description:
     "Free online translator and translation tool. Translate text between 100+ languages with auto-detection \u2014 no sign-up required.",
   applicationCategory: "UtilityApplication",
