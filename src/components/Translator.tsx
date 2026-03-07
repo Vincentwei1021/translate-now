@@ -114,6 +114,7 @@ export default function Translator() {
 
   return (
     <section id="translator" className="px-4 py-12 sm:px-6 sm:py-16">
+      <h2 className="sr-only">Online Translation Tool</h2>
       <div className="mx-auto max-w-5xl">
         {/* Language selectors + swap */}
         <div className="mb-4 flex items-center gap-2">
