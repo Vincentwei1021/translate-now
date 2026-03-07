@@ -1,63 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://translatenow.dev";
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-heading", weight: ["400","500","600","700","800"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://translate.toolboxlite.com";
 
 export const metadata: Metadata = {
-  title: "Free Online Translator & Translation Tool | TranslateNow",
-  description:
-    "Translate text between 100+ languages for free. Online translator with auto-detect & one-click copy. The best free translation tool — no sign-up required.",
-  keywords: [
-    "online translator",
-    "free translation tool",
-    "translate text online",
-    "language translator",
-    "free online translator",
-    "text translator",
-    "translate to english",
-    "translate to spanish",
-    "translate to chinese",
-    "ai translator online",
-    "multilingual translator",
-  ],
-  metadataBase: new URL(siteUrl),
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "Free Online Translator & Translation Tool | TranslateNow",
-    description:
-      "Translate text between 100+ languages instantly — free online translator with auto-detect. No sign-up.",
-    url: siteUrl,
-    siteName: "TranslateNow",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: `${siteUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: "TranslateNow — Free Online Translator & Translation Tool",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Free Online Translator & Translation Tool | TranslateNow",
-    description:
-      "Translate text between 100+ languages instantly — free online translator with auto-detect. No sign-up.",
-    images: [`${siteUrl}/og-image.png`],
-  },
+  title: "Free Online Translator — 100+ Languages | TranslateNow",
+  description: "Translate text between 100+ languages instantly. Auto-detect source language, glossary support. Free, fast, no sign-up.",
+  keywords: ["translator", "online translator", "translate text", "free translator", "language translator", "100 languages"],
+  metadataBase: new URL(siteUrl), alternates: { canonical: "/" },
+  openGraph: { title: "Free Translator — 100+ Languages | TranslateNow", description: "Translate text instantly. 100+ languages.", url: siteUrl, siteName: "TranslateNow", type: "website" },
+  twitter: { card: "summary_large_image", title: "Free Translator | TranslateNow", description: "100+ languages, instant translation. Free." },
   robots: { index: true, follow: true },
-  other: {
-    "theme-color": "#d97706",
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}>{children}</body>
+      <body className={`${jakarta.variable} ${inter.variable} font-sans antialiased bg-gray-50 text-gray-900`}>{children}</body>
     </html>
   );
 }
